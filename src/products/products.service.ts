@@ -4,7 +4,7 @@ import { Product } from './product.model';
 
 @Injectable()
 export class ProductsService {
-   // Adding private in front on products makes sure we can only access this products array from inside the service and that our service methods are the only way of interracting with it.
+   // Adding private in front of products makes sure we can only access this "products" array from inside the service and that our service methods are the only way of interracting with it.
    // This ensure that we can never edit or directly tap into products without going through a method.
    // This way we also interract with the data in the same way, in this case for example it ensures we also generate the id the same way
    private products: Product[] = [];
