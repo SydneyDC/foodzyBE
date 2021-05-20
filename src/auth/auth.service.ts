@@ -7,10 +7,7 @@ import { UsersService } from '../users/users.service';
 
 @Injectable()
 export class AuthService {
-   constructor(
-      private readonly usersService: UsersService,
-      private readonly jwtService: JwtService,
-   ) {}
+   constructor(private usersService: UsersService, private jwtService: JwtService) {}
 
    // this should be an async function if we were working with a database
    validate(email: string, password: string): User | null {
